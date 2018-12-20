@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="30dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_photo_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+            <ImageView
+                android:id="@+id/img_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/property_photo_bg"
+               />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/property_poto_holder"/>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <EditText
+            android:id="@+id/ed_vediolink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/bg_color"
+            android:hint="@string/add_video_link"
+            android:padding="10dp"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+    <at.markushi.ui.CircleButton
+        android:id="@+id/btn_next_account"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:src="@drawable/back"
+        android:rotation="180"
+        android:tint="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:cb_color="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:cb_pressedRingWidth="8dip" />
+
+</RelativeLayout>

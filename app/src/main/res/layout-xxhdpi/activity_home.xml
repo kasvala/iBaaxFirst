@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ibaax_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"/>
+            <ImageView
+                android:id="@+id/img_getstart"
+                android:layout_width="wrap_content"
+                android:layout_height="420dp"
+                android:src="@drawable/get_started"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/img_logo"
+                android:paddingRight="-10dp"
+                />
+            <Button
+                android:layout_below="@+id/img_getstart"
+                android:id="@+id/btn_getStart"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/get_start"
+                android:background="@drawable/btn_selected"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_below="@+id/btn_getStart"
+                android:id="@+id/btn_signin"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:background="@drawable/btn_desable"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_signin"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:text="@string/skip"
+                android:textColor="@color/des_color" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

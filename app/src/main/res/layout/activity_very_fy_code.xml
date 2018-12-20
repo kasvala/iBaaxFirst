@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/verify_code"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_code"
+            android:textColor="@color/screen_title"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/verify_desc"
+            android:textAlignment="textStart"
+            android:textColor="@color/des_color"
+            android:textSize="16dp" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/otp_view"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:padding="1dp"
+            android:textColor="@color/screen_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cursorColor="@color/colorPrimaryDark"
+            app:cursorWidth="1dp"
+
+            app:itemCount="6"
+            app:lineColor="@drawable/line_color"
+            app:lineWidth="2dp"
+            app:viewType="line" />
+
+        <TextView
+            android:id="@+id/txt_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>

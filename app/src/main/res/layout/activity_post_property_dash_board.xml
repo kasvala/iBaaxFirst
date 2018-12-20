@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/post_a_property"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGrop"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <RadioButton
+            android:id="@+id/rd_post_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+            android:button="@null"
+            android:checked="false"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/post_property" />
+
+        <RadioButton
+            android:id="@+id/rd_post_requirement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+            android:button="@null"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/post_requirements" />
+
+        <RadioButton
+            android:id="@+id/rd_real_estate_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+            android:button="@null"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/post_service" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

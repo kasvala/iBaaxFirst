@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/account_setup"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGrop"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <RadioButton
+            android:id="@+id/rd_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+             android:button="@null"
+            android:checked="true"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/general_user" />
+
+        <RadioButton
+            android:id="@+id/rd_profetional_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+            android:button="@null"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/professional_profile" />
+
+        <RadioButton
+            android:id="@+id/rd_business_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/toggle_radio_selecter"
+            android:button="@null"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/business_profile" />
+
+    </RadioGroup>
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/btn_next_account"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/back"
+        android:rotation="180"
+        android:tint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        app:cb_color="@color/colorPrimaryDark"
+        app:cb_pressedRingWidth="8dip" />
+</RelativeLayout>

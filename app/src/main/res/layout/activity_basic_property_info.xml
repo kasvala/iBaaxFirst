@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    tools:context=".activity.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/property_placeholder"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:text="@string/for_sale"
+                        android:textSize="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="14dp"
+                        android:textColor="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/red"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/property_rent_sale_bg"/>
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:padding="3dp"
+                        android:textColor="@color/orange"
+                        android:text="Price:1,45000"
+                        android:background="@drawable/price_bg"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="5dp"/>
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:layout_below="@+id/txt_addressline2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+                    <at.markushi.ui.CircleButton
+                        android:id="@+id/btn_fav"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/unfav"
+                        android:tint="@color/red"
+                        android:layout_centerHorizontal="true"
+                        app:cb_color="@color/white"
+                        app:cb_pressedRingWidth="0dip"
+                        android:layout_marginEnd="20dp"/>
+
+                    <at.markushi.ui.CircleButton
+                        android:id="@+id/img_share"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="20dp"
+                        app:cb_color="@color/white"
+                        app:cb_pressedRingWidth="0dip"
+                        android:src="@drawable/share" />
+                    <at.markushi.ui.CircleButton
+                        android:id="@+id/img_commennt"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cb_color="@color/white"
+                        app:cb_pressedRingWidth="0dip"
+                        android:src="@drawable/comment" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txt_instant_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/card_bg"
+                android:gravity="center_horizontal"
+                android:padding="12dp"
+                android:shadowColor="@color/shadowColor"
+                android:shadowDx="0"
+                android:shadowDy="3"
+                android:text="@string/instant_offer"
+                android:textAllCaps="true"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/basice_property_info"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_sq_ft"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/sq_ft" />
+
+                    <TextView
+                        android:id="@+id/txt_sq_ft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/img_sq_ft"
+                        android:text="1840\nSQ FT"
+                        android:textColor="@color/gray_font"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_bed"
+                        android:layout_width="32dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/bed" />
+
+                    <TextView
+                        android:id="@+id/txt_no_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/img_bed"
+                        android:text="3\nBed"
+                        android:textColor="@color/gray_font"
+                        android:textSize="13dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_bath"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/bathroom" />
+
+                    <TextView
+                        android:id="@+id/txt_no_bath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/img_bath"
+                        android:text="2\nBath"
+                        android:textColor="@color/gray_font"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/description"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txt_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profile_image"
+                android:text="Stunning and so sunny!! Brand new 1 bedroom apartment in a corner building with gorgeous wood tile floors, a custom kitchen with tons of cabinets and a granite breakfast bar, ceiling fans, a large private bedroom, good closets, marble tiled bathroom, exposed brick in every room and windows all around!"
+                android:textColor="@color/gray_font"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_des1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/profile_image"
+                android:text="- Year Built                           2010"
+                android:textColor="@color/gray_font"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_des2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profile_image"
+                android:text="- Property ID                        2151515821"
+                android:textColor="@color/gray_font"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_des3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profile_image"
+                android:text="- Posted by                          Agent"
+                android:textColor="@color/gray_font"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/location_map"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+            <fragment
+                android:id="@+id/fragment_map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/open_house_event"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+
+            <include layout="@layout/open_house_event"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/amenities_specificatin"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+            <include
+                layout="@layout/amenities_layoout" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/owner_sales"
+                android:textColor="@color/screen_title"
+                android:textSize="18dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_contactinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="40dp" />
+
+            <Button
+                android:id="@+id/btn_publish_property"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/publish_property"
+                android:background="@drawable/btn_selected"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/btn_unpublish"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/unpublish"
+                android:background="@color/des_color"
+                android:textAllCaps="false"
+                android:textColor="@color/screen_title"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

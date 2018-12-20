@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.HomeActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
+                    android:text="@string/indoor_amenities"
+                    android:textColor="@color/des_color"
+                    android:background="@drawable/card_bg"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_indoor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/margin_bottom"
+                    android:columnWidth="90dp"
+                    android:horizontalSpacing="@dimen/margin_bottom"
+
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
+                    android:text="@string/outdoor_features"
+                    android:textColor="@color/des_color"
+                    android:background="@drawable/card_bg"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_outdoor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:columnWidth="90dp"
+                    android:horizontalSpacing="@dimen/margin_bottom"
+                    android:verticalSpacing="@dimen/margin_bottom"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
+                    android:text="@string/property_facing"
+                    android:textColor="@color/des_color"
+                    android:background="@drawable/card_bg"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_propertyFacing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:numColumns="1"
+                    android:columnWidth="90dp"
+                    android:horizontalSpacing="@dimen/margin_bottom"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/margin_bottom"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="@string/property_sarrounding"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/des_color"
+                android:background="@drawable/card_bg"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/ed_surr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_surr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_surr3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_surr4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_marginBottom="10dp"
+                android:text="@string/property_pricing"
+                android:textColor="@color/des_color"
+                android:background="@drawable/card_bg"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/ed_price1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_price2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_price3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/ed_price4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_color"
+                android:hint="@string/sarrounding_hint"
+                android:textSize="14dp"
+                android:padding="10dp" />
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    tools:context=".activity.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card"/>
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rd_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle_selected"
+                    android:checked="true"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:text="@string/credit_card" />
+
+                <RadioButton
+                    android:id="@+id/rd_paypal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle_selected"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:text="@string/paypal" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/card_information"
+                android:textColor="@color/screen_title"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_toggle_selected"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/master_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/master_card_icon" />
+
+                <EditText
+                    android:id="@+id/ed_card_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/master_icon"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/card_no"
+                    android:inputType="number"
+                    android:padding="10dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:id="@+id/ed_cvc_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/master_icon"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle_selected"
+                    android:hint="@string/cvc"
+                    android:layout_marginEnd="15dp"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/ed_expdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/master_icon"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toggle_selected"
+                    android:hint="@string/ex_date"
+                    android:padding="10dp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_paynow"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/paynow"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
